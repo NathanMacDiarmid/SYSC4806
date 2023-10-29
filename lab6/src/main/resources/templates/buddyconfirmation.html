@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Buddy Successfully Submitted</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>src="buddy.js"</script>
+</head>
+<body>
+	<h1>Result</h1>
+    <p th:text="'id: ' + ${addbuddy.id}" />
+    <p th:text="'name: ' + ${addbuddy.name}" />
+    <p th:text="'number: ' + ${addbuddy.number}" />
+    <div>
+        <p class="buddyid">The ID is </p>
+        <p class="buddyname">The name is </p>
+        <p class="buddynumber">The number is </p>
+    </div>
+    <a href="/addbuddy">Add another Buddy</a>
+</body>
+</html>

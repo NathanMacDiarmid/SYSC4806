@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Add a Buddy</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>src="buddy.js"</script>
+</head>
+<body>
+	<h1>Add Buddy</h1>
+    <form action="#" th:action="@{/addbuddy}" th:object="${addbuddy}" method="POST">
+    	<p class="buddyid">Id: <input type="text" th:field="*{id}" /></p>
+        <p class="buddyname">Name: <input type="text" th:field="*{name}" /></p>
+        <p class="buddynumber">Number: <input type="text" th:field="*{number}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>

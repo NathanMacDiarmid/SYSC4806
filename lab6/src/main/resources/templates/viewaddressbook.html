@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Buddy Successfully Submitted</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>This is the book you added:</h1>
+    <p th:text="'Book id: ' + ${addaddressbook.id}" />
+    <tr th:each="buddy: ${addaddressbook.getBuddies}">
+        <td th:text="${buddy.id}" />
+        <td th:text="${buddy.name}" />
+        <td th:text="${buddy.number}" />
+        <br>
+    </tr>
+    <a href="/addaddressbook">Add another AddressBook</a>
+</body>
+</html>
